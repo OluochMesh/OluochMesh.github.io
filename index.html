@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meshack's Terminal</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Hidden inputs for navigation -->
+  <input type="radio" name="section" id="help-tab" checked>
+  <input type="radio" name="section" id="whoami-tab">
+  <input type="radio" name="section" id="education-tab">
+  <input type="radio" name="section" id="interests-tab">
+  <input type="radio" name="section" id="projects-tab">
+  <input type="radio" name="section" id="skills-tab">
+  <input type="radio" name="section" id="contact-tab">
+
+  <div class="terminal-window">
+    <!-- Window Controls -->
+    <div class="window-controls">
+      <div class="control-buttons">
+        <div class="control-btn close"></div>
+        <div class="control-btn minimize"></div>
+        <div class="control-btn maximize"></div>
+      </div>
+      <div class="window-title">meshack@terminal: ~</div>
+    </div>
+
+    <!-- Main Terminal Content -->
+    <div class="terminal-content">
+      <!-- Terminal Header -->
+      <div class="terminal-header">
+        <div class="ascii-banner">
+          <pre>
+███╗   ███╗███████╗███████╗██╗  ██╗ █████╗  ██████╗██╗  ██╗
+████╗ ████║██╔════╝██╔════╝██║  ██║██╔══██╗██╔════╝██║ ██╔╝
+██╔████╔██║█████╗  ███████╗███████║███████║██║     █████╔╝ 
+██║╚██╔╝██║██╔══╝  ╚════██║██╔══██║██╔══██║██║     ██╔═██╗ 
+██║ ╚═╝ ██║███████╗███████║██║  ██║██║  ██║╚██████╗██║  ██╗
+╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+          </pre>
+        </div>
+        
+        <div class="user-info">
+          <div class="profile-line">
+            <span class="prompt">root@meshack:</span>
+            <span class="user-details">IT Student & Developer | Kenya | Expected Graduation: 2026</span>
+          </div>
+        </div>
+
+        <div class="command-history">
+          <div class="command-line">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="command">ssh meshack@terminal</span>
+          </div>
+          <div class="command-line">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="command">cat welcome.txt</span>
+          </div>
+          <div class="command-line">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="command">ls -la</span>
+          </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="terminal-nav">
+          <div class="nav-prompt">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="nav-text">Available commands:</span>
+          </div>
+          <div class="nav-commands">
+            <label for="help-tab" class="nav-command">
+              <span class="command-name">help</span>
+              <span class="command-desc">- Show available commands</span>
+            </label>
+            <label for="whoami-tab" class="nav-command">
+              <span class="command-name">whoami</span>
+              <span class="command-desc">- Display user information</span>
+            </label>
+            <label for="education-tab" class="nav-command">
+              <span class="command-name">education</span>
+              <span class="command-desc">- Show educational background</span>
+            </label>
+            <label for="interests-tab" class="nav-command">
+              <span class="command-name">cat interests.txt</span>
+              <span class="command-desc">- List interests and passions</span>
+            </label>
+            <label for="projects-tab" class="nav-command">
+              <span class="command-name">ls projects/</span>
+              <span class="command-desc">- List all projects</span>
+            </label>
+            <label for="skills-tab" class="nav-command">
+              <span class="command-name">skills --list</span>
+              <span class="command-desc">- Display technical skills</span>
+            </label>
+            <label for="contact-tab" class="nav-command">
+              <span class="command-name">nano contact.txt</span>
+              <span class="command-desc">- Open contact information</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="current-command">
+          <span class="prompt">meshack@portfolio:~$</span>
+          <span class="command-input"></span>
+          <span class="cursor">█</span>
+        </div>
+      </div>
+
+      <!-- Terminal Output Area -->
+      <div class="terminal-output">
+        <!-- Help Section -->
+        <div class="content-section" id="help-section">
+          <div class="output-header">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="executed-command">help</span>
+          </div>
+          <div class="output-content">
+            <div class="output-text">
+              <strong>MESHACK'S TERMINAL PORTFOLIO v2.0</strong>
+            </div>
+            <div class="output-text">
+              System Information:
+            </div>
+            <div class="system-info">
+              <div class="info-line">OS: Terminal Portfolio Linux</div>
+              <div class="info-line">Kernel: Academic-5.15.0</div>
+              <div class="info-line">Shell: /bin/passion</div>
+              <div class="info-line">Uptime: Coding since 2022</div>
+            </div>
+            
+            <div class="output-text">
+              Available commands and their descriptions are listed above.
+              Click any command to execute it, or scroll down to see all sections.
+            </div>
+            
+            <div class="social-section">
+              <div class="output-text">Quick Links:</div>
+              <div class="social-links">
+                <a href="https://github.com/OluochMesh" target="_blank" class="social-link">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/meshack-oluoch-aa29ab250" target="_blank" class="social-link">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="mailto:meshackoluoch83@gmail.com" class="social-link">
+                  <i class="fas fa-envelope"></i> Email
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Whoami Section -->
+        <div class="content-section" id="whoami-section">
+          <div class="output-header">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="executed-command">whoami</span>
+          </div>
+          <div class="output-content">
+            <div class="user-card">
+              <div class="user-ascii">
+                <pre>
+    ╭─────────────────────────╮
+    │  USER: meshack_oluoch   │
+    │  STATUS: online         │
+    │  ROLE: developer        │
+    │  LOCATION: kenya        │
+    ╰─────────────────────────╯
+                </pre>
+              </div>
+              <img src="assets/profile-pic.jpeg" alt="Meshack Oluoch" class="profile-pic">
+              <div class="user-details-section">
+                <div class="detail-line">
+                  <strong>Full Name:</strong> Meshack Odhiambo Oluoch
+                </div>
+                <div class="detail-line">
+                  <strong>Role:</strong> Information Technology Student & Developer
+                </div>
+                <div class="detail-line">
+                  <strong>University:</strong> Masinde Muliro University
+                </div>
+                <div class="detail-line">
+                  <strong>Expected Graduation:</strong> 2026
+                </div>
+                <div class="detail-line">
+                  <strong>Location:</strong> Kenya
+                </div>
+              </div>
+            </div>
+            
+            <div class="bio-section">
+              <div class="output-text">
+                <strong>$ cat about_me.txt</strong>
+              </div>
+              <div class="bio-content">
+                I'm a passionate IT student who loves solving real-world problems through code. 
+                My focus is on education and digital transformation, creating technology solutions 
+                that make a meaningful impact on people's lives.
+              </div>
+              <div class="bio-content">
+                Currently exploring web development, automation, and building tools that help communities grow.
+                I believe technology should be accessible and beneficial to everyone.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="content-section" id="education-section">
+          <div class="output-header">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="executed-command">education</span>
+          </div>
+          <div class="output-content">
+            <div class="output-text">
+              <strong>EDUCATIONAL BACKGROUND</strong>
+            </div>
+            
+            <div class="education-item">
+              <div class="education-header">
+                <span class="degree-icon">🎓</span>
+                <span class="degree-title">Bachelor of Information Technology</span>
+              </div>
+              <div class="education-details">
+                <div class="detail-grid">
+                  <div class="detail-item">
+                    <strong>Institution:</strong> Masinde Muliro University
+                  </div>
+                  <div class="detail-item">
+                    <strong>Expected Graduation:</strong> 2026
+                  </div>
+                  <div class="detail-item">
+                    <strong>Focus Areas:</strong> Software Development, Database Systems, Web Technologies
+                  </div>
+                  <div class="detail-item">
+                    <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Web Development, Database Design
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="file-download">
+              <div class="output-text">
+                <strong>$ ls documents/</strong>
+              </div>
+              <div class="file-listing">
+                <a href="assets/meshack_cv.pdf" download class="file-link">
+                  📄 meshack_cv.pdf
+                </a>
+                <span class="file-size">[47.1kB]</span>
+                <span class="file-desc">- Complete CV </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="content-section" id="interests-section">
+          <div class="output-header">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="executed-command">cat interests.txt</span>
+          </div>
+          <div class="output-content">
+            <div class="interests-list">
+              <div class="interest-item">
+                <span class="bullet">></span> Experimenting with new open-source tools and frameworks
+              </div>
+              <div class="interest-item">
+                <span class="bullet">></span> Building tools to help people learn, automate, and connect
+              </div>
+              <div class="interest-item">
+                <span class="bullet">></span> Web development (with focus on backend architecture)
+              </div>
+              <div class="interest-item">
+                <span class="bullet">></span> Contributing to community-driven tech projects
+              </div>
+              <div class="interest-item">
+                <span class="bullet">></span> Digital transformation in traditional industries
+              </div>
+              <div class="interest-item">
+                <span class="bullet">></span> Teaching and mentoring fellow students
+              </div>
+            </div>
+            
+            <div class="output-text">
+              <strong>EOF</strong> - End of interests.txt
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="content-section" id="projects-section">
+          <div class="output-header">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="executed-command">ls projects/ -la</span>
+          </div>
+          <div class="output-content">
+            <div class="directory-listing">
+              <div class="listing-header">
+                total 3 directories
+              </div>
+              
+              <div class="project-entry">
+                <div class="project-permissions">drwxr-xr-x</div>
+                <div class="project-name">digital_farmer_records/</div>
+                <div class="project-size">[Python+SQLite]</div>
+              </div>
+              
+              <div class="project-entry">
+                <div class="project-permissions">drwxr-xr-x</div>
+                <div class="project-name">edusocial_nexus/</div>
+                <div class="project-size">[React+Node.js]</div>
+              </div>
+              
+              <div class="project-entry">
+                <div class="project-permissions">drwxr-xr-x</div>
+                <div class="project-name">terminal_portfolio/</div>
+                <div class="project-size">[HTML+CSS]</div>
+              </div>
+            </div>
+            
+            <div class="projects-detailed">
+              <div class="project-detail">
+                <div class="project-title">
+                  <span class="folder-icon">📁</span>
+                  <strong>digital_farmer_records/</strong>
+                </div>
+                <div class="project-description">
+                  A comprehensive Python + SQLite solution designed to digitize farmer data and automate payslip 
+                  generation at Kuresoi Tea Factory. Features include data management, automated calculations, 
+                  report generation, and user-friendly interfaces for farmers and administrators.
+                </div>
+                <div class="project-tech">
+                  <strong>Stack:</strong> Python, SQLite, Tkinter, Pandas
+                </div>
+                <div class="project-link">
+                  <a href="https://github.com/OluochMesh/KRSF-Digital-farmer-data-system.git" target="_blank" class="project-repo-link">
+                    <i class="fab fa-github">View Repository</i>
+                  </a>
+
+                </div>
+              </div>
+              
+              <div class="project-detail">
+                <div class="project-title">
+                  <span class="folder-icon">📁</span>
+                  <strong>edusocial_nexus/</strong>
+                </div>
+                <div class="project-description">
+                  A modern React-based academic platform that enables students to share educational content, 
+                  collaborate on projects, and communicate effectively. Built with responsive design, real-time 
+                  messaging capabilities, and intuitive user experience.
+                </div>
+                <div class="project-tech">
+                  <strong>Stack:</strong> React.js, springboot, RabbitMQ, Socket.io,Elixir
+                </div>
+                <div class="project-link">
+                  <a href="https://github.com/dogovicky/Collab-Project.git" target="_blank" class="project-repo-link">
+                    <i class="fab fa-github">View Repository</i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="project-detail">
+                <div class="project-title">
+                  <span class="folder-icon">📁</span>
+                  <strong>terminal_portfolio/</strong>
+                </div>
+                <div class="project-description">
+                  This interactive terminal-themed portfolio website showcasing skills and projects with 
+                  a unique command-line interface experience. Built with pure HTML and CSS for optimal 
+                  performance and accessibility.
+                </div>
+                <div class="project-tech">
+                  <strong>Stack:</strong> HTML5, CSS3, Responsive Design
+                </div>
+                <div class="project-link">
+                  <a href="https://github.com/dogovicky/Collab-Project.git" target="_blank" class="project-repo-link">
+                    <i class="fab fa-github">View Repository</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="content-section" id="skills-section">
+          <div class="output-header">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="executed-command">skills --list</span>
+          </div>
+          <div class="output-content">
+            <div class="skills-tree">
+              <pre class="skills-ascii">
+├── Programming Languages
+│   ├── Python         ██████       50%
+│   ├── JavaScript     █████        45%  
+│   ├── HTML/CSS       ███████      60%
+│
+├── Frameworks & Libraries
+│   ├── React.js       █████        45%
+│   ├── Flask          ██████       50%
+│
+├── Tools & Technologies
+│   ├── Git & GitHub   ██████       50%
+│   ├── MySQL/SQLite   ██████       50%
+│   ├── Linux/Terminal ██████       50%
+│
+└── Soft Skills
+    ├── Problem Solving ████████ 70%
+    ├── Team Work       ███████████  85%
+    ├── Communication   ██████████   80%
+              </pre>
+            </div>
+            
+            <div class="skills-summary">
+              <div class="output-text">
+                <strong>$ grep -i "expertise" skills.log</strong>
+              </div>
+              <div class="expertise-areas">
+                <div class="area">🔧 Full-Stack Web Development</div>
+                <div class="area">🐍 Python Development & Automation</div>
+                <div class="area">💾 Database Design & Management</div>
+                <div class="area">🛠️ Version Control & Collaboration</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="content-section" id="contact-section">
+          <div class="output-header">
+            <span class="prompt">meshack@portfolio:~$</span>
+            <span class="executed-command">nano contact.txt</span>
+          </div>
+          <div class="output-content">
+            <div class="contact-info">
+              <div class="output-text">
+                <strong>CONTACT INFORMATION</strong>
+              </div>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                  <strong>Email:</strong> meshackoluoch83@gmail.com
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon"><i class="fab fa-linkedin"></i></span>
+                  <strong>LinkedIn:</strong> 
+                  <a href="https://www.linkedin.com/in/meshack-oluoch-aa29ab250" class="contact-link">linkedin.com/in/meshack-oluoch-aa29ab250</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon"><i class="fab fa-github"></i></span>
+                  <strong>GitHub:</strong> 
+                  <a href="https://github.com/OluochMesh" class="contact-link">github.com/OluochMesh</a>
+                </div>
+                <div class="contact-item">
+                  <span class="contact-icon"><i class="fas fa-mobile-alt"></i></span>
+                  <strong>Location:</strong> Kenya
+                </div>
+              </div>
+            </div>
+            
+            <div class="message-form">
+              <div class="output-text">
+                <strong>$ vim new_message.txt</strong>
+              </div>
+              
+              <form class="terminal-form" action="mailto:meshackoluoch83@gmail.com" method="post" enctype="text/plain">
+                <div class="form-row">
+                  <label class="form-label">Name:</label>
+                  <input type="text" name="name" class="form-input" placeholder="Your full name" required>
+                </div>
+                
+                <div class="form-row">
+                  <label class="form-label">Email:</label>
+                  <input type="email" name="email" class="form-input" placeholder="your.email@domain.com" required>
+                </div>
+                
+                <div class="form-row">
+                  <label class="form-label">Subject:</label>
+                  <input type="text" name="subject" class="form-input" placeholder="What's this about?" required>
+                </div>
+                
+                <div class="form-row">
+                  <label class="form-label">Message:</label>
+                  <textarea name="message" class="form-textarea" rows="6" placeholder="Type your message here..." required></textarea>
+                </div>
+                
+                <div class="form-actions">
+                  <button type="submit" class="send-button">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                  </button>
+                  <div class="vim-commands">
+                    <span>:wq to save and quit</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="terminal-footer">
+      <div class="footer-content">
+        <p>&copy; 2023 Meshack Oluoch. All rights reserved.</p>
+        <p>Built with ❤️ and pure HTML & CSS.</p>
+      </div>
+    </footer>
+
+    <style>
+    .terminal-footer {
+      background: #000;
+      color: #00ff00;
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #333;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-content p {
+      margin: 5px 0;
+    }
+    </style>
+  </div>
+</body>
+</html>
